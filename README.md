@@ -9,25 +9,36 @@
 
 ## Example using a pen:
 
-Attributes:
-color, load, capped, weight
+### Attributes:
+* color, 
+* load, 
+* capped, 
+* weight
 
-Methods:
+### Methods:
 draw, cover, uncover
 
-State.
+### State:
+- *State* refers to the current condition of the object, such as whether the pen is capped or uncapped. The state of an object can change over time as we interact with its methods.
 
-**EVERY OBJECT HAS ATTRIBUTE, METHODS AND STATE.**
+#### **EVERY OBJECT HAS ATTRIBUTE, METHODS AND STATE.**
 
-Instantiate = Generate **object** from a **class**;
+# Instantiate = Generate **object** from a **class**;
 
-Class = "classification", planning of an object;
-
-Class:
+## Class:
+* "Classification" or blueprint of an object;
 * Defines common **attributes** and methods that will be shared by an **object**.
 
-Object:
+## Object:
 * It is an **instance** of a **class**.
+
+## The **`new`** Operator:
+
+In JavaScript, the `new` operator is used to create an instance of an object from a class. When you use `new`, it does three main things:
+1. **Creates a New Object:** A new, empty object is created.
+2. **Links the Object to a Prototype:** The new object’s prototype is linked to the constructor’s `prototype`.
+3. **Executes the Constructor Function:** The constructor function is called with `this` bound to the new object, initializing its properties.
+4. **Returns the Object:** Finally, the newly created object is returned.
 
 ### Example:
 
@@ -98,4 +109,28 @@ class Pen {
 
 // Instantiation of the Pen class
 const instance = new Pen ();
+
+// Attempt to uncap the pen
+instance.openPen ();
+
+// Attempt to draw with the pen
+instance.drawPen ();
+
+// Attempt to cap the pen
+instance.closePen ();
 ```
+
+# Practical Exercises:
+
+1. ## Change the pen's color:
+- Add a `changeColor (newColor)` method that allows you to change the pen's color.
+2. ## Refill the pen::
+- Add a `refill (amount)` method that increases the pen's charge.
+3. ## Implement a new class:
+- Create a new **`Notebook`** class with attributes like `numberOfPages` and methods like `writeOnPage ()`.
+
+
+# Advanced Concepts:
+
+- **Inheritance**: Classes can inherit attributes and methods from other classes, allowing for code reuse and organization.
+- **Polymorphism**: Objects can be treated as instances of their base classes, allowing flexibility and generalization in the code.
